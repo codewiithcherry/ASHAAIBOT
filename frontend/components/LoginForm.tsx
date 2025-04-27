@@ -53,7 +53,7 @@ export function LoginForm({ onLoginSuccess, switchToRegister }: LoginFormProps) 
 
     try {
         console.log('Preparing login request...')
-        const response = await fetch('http://localhost:8000/api/auth/token', {
+        const response = await fetch('https://ashaaibot-jm0x.onrender.com/api/auth/token', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
