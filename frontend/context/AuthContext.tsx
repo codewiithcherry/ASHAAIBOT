@@ -64,7 +64,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
     setIsLoading(true)
     try {
-      const response = await fetch('http://localhost:8000/api/users/me', {
+      const response = await fetch('https://ashaaibot-jm0x.onrender.com/api/users/me', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
