@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useRef } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -43,7 +42,7 @@ export default function Form({ isLoading, onSubmit, onOpenOptions }: FormProps) 
       use_hyper: false,
       tier: "Regular",
       TAPose: false,
-      material: "PBR",
+      material: undefined, // Optional, can be undefined
     },
   })
 
