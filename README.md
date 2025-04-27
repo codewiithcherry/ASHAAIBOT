@@ -3,6 +3,72 @@
 ## Overview
 ASHAAIBOT is an AI-powered virtual assistant designed to enhance user engagement on the JobsForHer Foundation platform. It combines a Next.js frontend with a Python backend to provide seamless access to publicly available information about women careers, job listings, community events, and mentorship programs.
 
+## Architecture Diagram
+```mermaid
+graph TD
+    subgraph "Frontend (Next.js)"
+        UI[User Interface]
+        Components[React Components]
+        Context[Context Providers]
+        Hooks[Custom Hooks]
+        API[API Integration]
+    end
+
+    subgraph "Backend (Python)"
+        API_Server[FastAPI Server]
+        AI_Engine[AI Processing Engine]
+        VectorDB[(Vector Database)]
+        Memory[Memory Management]
+        Auth[Authentication]
+    end
+
+    subgraph "External Services"
+        JobsAPI[Jobs API]
+        EventsAPI[Events API]
+        MentorshipAPI[Mentorship API]
+        SessionsAPI[Sessions API]
+    end
+
+    subgraph "Data Storage"
+        UserData[(User Data)]
+        SessionData[(Session Data)]
+        KnowledgeBase[(Knowledge Base)]
+    end
+
+    %% Frontend Connections
+    UI --> Components
+    Components --> Context
+    Context --> Hooks
+    Hooks --> API
+
+    %% Backend Connections
+    API --> API_Server
+    API_Server --> AI_Engine
+    AI_Engine --> VectorDB
+    AI_Engine --> Memory
+    API_Server --> Auth
+
+    %% External Service Connections
+    API_Server --> JobsAPI
+    API_Server --> EventsAPI
+    API_Server --> MentorshipAPI
+    API_Server --> SessionsAPI
+
+    %% Data Storage Connections
+    Auth --> UserData
+    Memory --> SessionData
+    AI_Engine --> KnowledgeBase
+
+    %% Styling
+    classDef default fill:none,stroke:#000,stroke-width:2px;
+    classDef database fill:none,stroke:#000,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef service fill:none,stroke:#000,stroke-width:2px,stroke-dasharray: 3 3;
+    
+    class UI,Components,Context,Hooks,API,API_Server,AI_Engine,Memory,Auth default;
+    class VectorDB,UserData,SessionData,KnowledgeBase database;
+    class JobsAPI,EventsAPI,MentorshipAPI,SessionsAPI service;
+```
+
 ## Problem Statement
 The project aims to develop Asha AI Chatbot to enhance user engagement on the JobsForHer Foundation platform by offering seamless access to publicly available information. As an AI-powered virtual assistant, Asha guides users in exploring:
 - Women careers
