@@ -280,18 +280,3 @@ npm run dev  # or: yarn dev / pnpm dev
 * **Vector Embeddings**: Semantic understanding and search
 * **Document Generation**: PDF creation and manipulation
 * **Data Persistence**: Storage and retrieval of conversations and data
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-## Contact
-
-For questions or support, please contact: [support@opportunityai.org](mailto:support@opportunityai.org)
-```
-
-Note: The markdown contains proper formatting for code blocks, lists, and headers. The project structure has been updated from "ASHAAIBOT/" to "OpportunityAI/" to reflect the name change. All references to "Asha" or "AshaAI" have been replaced with "OpportunityAI".
